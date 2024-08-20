@@ -14,6 +14,10 @@ import pandas as pd
 import numpy as np
 import os
 
+curr_dir = os.getcwd()
+working_dir = os.path.join(curr_dir , "Dataset")
+os.chdir(working_dir)
+
 # Constants
 time = 10
 offset = 100
