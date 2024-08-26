@@ -15,6 +15,8 @@ import numpy as np
 import os
 
 curr_dir = os.getcwd()
+if 'HAR' not in curr_dir:
+    curr_dir = os.path.join(curr_dir , "HAR")
 if 'dataset' not in curr_dir: 
     working_dir = os.path.join(curr_dir , "Dataset")
     os.chdir(working_dir)
