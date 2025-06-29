@@ -1,14 +1,10 @@
-# Assignment 1
-
-## Total 20 marks (Will be scaled down to 10 marks)
-
 # Human Activity Recognition (HAR)
 Human Activity Recognition (HAR) refers to the capability of machines to identify various activities performed by the users. The knowledge acquired from these systems/algorithms is integrated into many applications where the associated device uses it to identify actions or gestures and performs predefined tasks in response.
 
 ## Dataset
 We are interested in classifying human activities based on accelerometer data. we will be using a publically available dataset called [UCI-HAR](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=8567275). The dataset is available to download [here](https://archive.ics.uci.edu/dataset/240/human+activity+recognition+using+smartphones). Just for your reference a youtube video of the authors collecting participant's accelerometer data is also available [here](http://www.youtube.com/watch?v=XOEN9W05_4A). 
 
-## Task 1 : Exploratory Data Analysis (EDA) [3 marks]
+## Task 1 : Exploratory Data Analysis (EDA) 
 
 ### Preprocessing
 We will use the raw accelerometer data within the inertial_signals folder. The provided script, `CombineScript.py`, organizes and sorts accelerometer data, establishing separate classes for each category and compiling participant data into these classes. `MakeDataset.py` script is used to read through all the participant data and create a single dataset. The dataset is then split into train,test and validation set. We focus on the first 10 seconds of activity, translating to the initial 500 data samples due to a sampling rate of 50Hz.
@@ -30,7 +26,7 @@ We will use the raw accelerometer data within the inertial_signals folder. The p
 4. Calculate the correlation matrix of the features obtained by TSFEL and provided in the dataset. Identify the features that are highly correlated with each other. Are there any redundant features? **[1 marks]**
 
 
-## Task 2 : Decision Trees for Human Activity Recognition [3 marks]
+## Task 2 : Decision Trees Implementation for Human Activity Recognition
 
 ### Questions
 
@@ -86,7 +82,7 @@ For this exercise marks will not depend on what numbers you get but on the proce
 2. ***DO NOT share your API key with anyone or make it public or upload it to any public repository such as for this assignment. If the key is found in the code, you will be penalized with a <u>1.0 marks deduction</u>.***
 3. It is advised to either write a markdown file (.md) or use a Python notebook (.ipynb) to demonstrate your reasoning, results and findings.
 
-## Decision Tree Implementation [6 marks]
+## Decision Tree Implementation
 
 1. Complete the decision tree implementation in tree/base.py. The code should be written in Python and not use existing libraries other than the ones shared in class or already imported in the code. Your decision tree should work for four cases: i) discrete features, discrete output; ii) discrete features, real output; iii) real features, discrete output; real features, real output. <u>Your model should accept real inputs only (for discrete inputs, you may convert the attributes into one-hot encoded vectors)</u>. Your decision tree should be able to use InformationGain using Entropy or GiniIndex as the criteria for splitting for discrete output. Your decision tree should be able to use InformationGain using MSE as the criteria for splitting for real output. Your code should also be able to plot/display the decision tree.  **[2.5 marks]**
 
